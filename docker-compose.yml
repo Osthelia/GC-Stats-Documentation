@@ -1,0 +1,11 @@
+services:
+  gcs-docs:
+    image: ghcr.io/osthelia/gc-stats-documentation
+    container_name: gcs-docs
+    restart: unless-stopped
+    networks:
+      - cf-tunnel
+
+networks:
+  cf-tunnel:
+    external: true

@@ -1,0 +1,278 @@
+{
+  "version.label": {
+    "message": "Suivant",
+    "description": "The label for version current"
+  },
+  "sidebar.docsSidebar.category.Dashboard": {
+    "message": "Dashboard",
+    "description": "The label for category 'Dashboard' in sidebar 'docsSidebar'"
+  },
+  "sidebar.docsSidebar.category.API": {
+    "message": "API",
+    "description": "The label for category 'API' in sidebar 'docsSidebar'"
+  },
+  "sidebar.docsSidebar.category.Reference": {
+    "message": "Référence",
+    "description": "The label for category 'Reference' in sidebar 'docsSidebar'"
+  },
+  "sidebar.docsSidebar.category.Players": {
+    "message": "Players",
+    "description": "The label for category 'Players' in sidebar 'docsSidebar'"
+  },
+  "sidebar.docsSidebar.category.Teams": {
+    "message": "Teams",
+    "description": "The label for category 'Teams' in sidebar 'docsSidebar'"
+  },
+  "sidebar.docsSidebar.category.Tournaments": {
+    "message": "Tournaments",
+    "description": "The label for category 'Tournaments' in sidebar 'docsSidebar'"
+  },
+  "sidebar.docsSidebar.category.Matches": {
+    "message": "Matches",
+    "description": "The label for category 'Matches' in sidebar 'docsSidebar'"
+  },
+  "sidebar.docsSidebar.category.Maps": {
+    "message": "Maps",
+    "description": "The label for category 'Maps' in sidebar 'docsSidebar'"
+  },
+  "sidebar.docsSidebar.category.Teams V2": {
+    "message": "Teams V2",
+    "description": "The label for category 'Teams V2' in sidebar 'docsSidebar'"
+  },
+  "sidebar.docsSidebar.category.Players V2": {
+    "message": "Players V2",
+    "description": "The label for category 'Players V2' in sidebar 'docsSidebar'"
+  },
+  "sidebar.docsSidebar.category.Tournaments V2": {
+    "message": "Tournaments V2",
+    "description": "The label for category 'Tournaments V2' in sidebar 'docsSidebar'"
+  },
+  "sidebar.docsSidebar.category.Organization V2": {
+    "message": "Organization V2",
+    "description": "The label for category 'Organization V2' in sidebar 'docsSidebar'"
+  },
+  "sidebar.docsSidebar.category.VODs V2": {
+    "message": "VODs V2",
+    "description": "The label for category 'VODs V2' in sidebar 'docsSidebar'"
+  },
+  "sidebar.docsSidebar.category.News V2": {
+    "message": "News V2",
+    "description": "The label for category 'News V2' in sidebar 'docsSidebar'"
+  },
+  "sidebar.docsSidebar.category.Matches V2": {
+    "message": "Matches V2",
+    "description": "The label for category 'Matches V2' in sidebar 'docsSidebar'"
+  },
+  "sidebar.docsSidebar.category.Search V2": {
+    "message": "Search V2",
+    "description": "The label for category 'Search V2' in sidebar 'docsSidebar'"
+  },
+  "sidebar.docsSidebar.doc.Search players by handle": {
+    "message": "Search players by handle",
+    "description": "The label for the doc item 'Search players by handle' in sidebar 'docsSidebar', linking to the doc api/reference/search-players-by-handle"
+  },
+  "sidebar.docsSidebar.doc.Get a player by id": {
+    "message": "Get a player by id",
+    "description": "The label for the doc item 'Get a player by id' in sidebar 'docsSidebar', linking to the doc api/reference/get-a-player-by-id"
+  },
+  "sidebar.docsSidebar.doc.Get a player's team history": {
+    "message": "Get a player's team history",
+    "description": "The label for the doc item 'Get a player's team history' in sidebar 'docsSidebar', linking to the doc api/reference/get-a-players-team-history"
+  },
+  "sidebar.docsSidebar.doc.Get a player's photo history": {
+    "message": "Get a player's photo history",
+    "description": "The label for the doc item 'Get a player's photo history' in sidebar 'docsSidebar', linking to the doc api/reference/get-a-players-photo-history"
+  },
+  "sidebar.docsSidebar.doc.Get a player's average stats": {
+    "message": "Get a player's average stats",
+    "description": "The label for the doc item 'Get a player's average stats' in sidebar 'docsSidebar', linking to the doc api/reference/get-a-players-average-stats"
+  },
+  "sidebar.docsSidebar.doc.Get a player's per agent stats": {
+    "message": "Get a player's per agent stats",
+    "description": "The label for the doc item 'Get a player's per agent stats' in sidebar 'docsSidebar', linking to the doc api/reference/get-a-players-per-agent-stats"
+  },
+  "sidebar.docsSidebar.doc.Get a player's weapon stats": {
+    "message": "Get a player's weapon stats",
+    "description": "The label for the doc item 'Get a player's weapon stats' in sidebar 'docsSidebar', linking to the doc api/reference/get-a-players-weapon-stats"
+  },
+  "sidebar.docsSidebar.doc.Search teams by name": {
+    "message": "Search teams by name",
+    "description": "The label for the doc item 'Search teams by name' in sidebar 'docsSidebar', linking to the doc api/reference/search-teams-by-name"
+  },
+  "sidebar.docsSidebar.doc.Get a team by id": {
+    "message": "Get a team by id",
+    "description": "The label for the doc item 'Get a team by id' in sidebar 'docsSidebar', linking to the doc api/reference/get-a-team-by-id"
+  },
+  "sidebar.docsSidebar.doc.Get a team's roster": {
+    "message": "Get a team's roster",
+    "description": "The label for the doc item 'Get a team's roster' in sidebar 'docsSidebar', linking to the doc api/reference/get-a-teams-roster"
+  },
+  "sidebar.docsSidebar.doc.Get a team's logo history": {
+    "message": "Get a team's logo history",
+    "description": "The label for the doc item 'Get a team's logo history' in sidebar 'docsSidebar', linking to the doc api/reference/get-a-teams-logo-history"
+  },
+  "sidebar.docsSidebar.doc.Get a team's map veto stats": {
+    "message": "Get a team's map veto stats",
+    "description": "The label for the doc item 'Get a team's map veto stats' in sidebar 'docsSidebar', linking to the doc api/reference/get-a-teams-map-veto-stats"
+  },
+  "sidebar.docsSidebar.doc.Get a team's map stats": {
+    "message": "Get a team's map stats",
+    "description": "The label for the doc item 'Get a team's map stats' in sidebar 'docsSidebar', linking to the doc api/reference/get-a-teams-map-stats"
+  },
+  "sidebar.docsSidebar.doc.Get a team's weapon stats": {
+    "message": "Get a team's weapon stats",
+    "description": "The label for the doc item 'Get a team's weapon stats' in sidebar 'docsSidebar', linking to the doc api/reference/get-a-teams-weapon-stats"
+  },
+  "sidebar.docsSidebar.doc.Get a team's average stats": {
+    "message": "Get a team's average stats",
+    "description": "The label for the doc item 'Get a team's average stats' in sidebar 'docsSidebar', linking to the doc api/reference/get-a-teams-average-stats"
+  },
+  "sidebar.docsSidebar.doc.Get a team's match history": {
+    "message": "Get a team's match history",
+    "description": "The label for the doc item 'Get a team's match history' in sidebar 'docsSidebar', linking to the doc api/reference/get-a-teams-match-history"
+  },
+  "sidebar.docsSidebar.doc.Search tournaments by name": {
+    "message": "Search tournaments by name",
+    "description": "The label for the doc item 'Search tournaments by name' in sidebar 'docsSidebar', linking to the doc api/reference/search-tournaments-by-name"
+  },
+  "sidebar.docsSidebar.doc.Get a tournament by id": {
+    "message": "Get a tournament by id",
+    "description": "The label for the doc item 'Get a tournament by id' in sidebar 'docsSidebar', linking to the doc api/reference/get-a-tournament-by-id"
+  },
+  "sidebar.docsSidebar.doc.Get a tournament's logo history": {
+    "message": "Get a tournament's logo history",
+    "description": "The label for the doc item 'Get a tournament's logo history' in sidebar 'docsSidebar', linking to the doc api/reference/get-a-tournaments-logo-history"
+  },
+  "sidebar.docsSidebar.doc.Get a match by id": {
+    "message": "Get a match by id",
+    "description": "The label for the doc item 'Get a match by id' in sidebar 'docsSidebar', linking to the doc api/reference/get-a-match-by-id"
+  },
+  "sidebar.docsSidebar.doc.Get a match's full stats": {
+    "message": "Get a match's full stats",
+    "description": "The label for the doc item 'Get a match's full stats' in sidebar 'docsSidebar', linking to the doc api/reference/get-a-matchs-full-stats"
+  },
+  "sidebar.docsSidebar.doc.Get a map by id": {
+    "message": "Get a map by id",
+    "description": "The label for the doc item 'Get a map by id' in sidebar 'docsSidebar', linking to the doc api/reference/get-a-map-by-id"
+  },
+  "sidebar.docsSidebar.doc.Get a map's round by round breakdown": {
+    "message": "Get a map's round by round breakdown",
+    "description": "The label for the doc item 'Get a map's round by round breakdown' in sidebar 'docsSidebar', linking to the doc api/reference/get-a-maps-round-by-round-breakdown"
+  },
+  "sidebar.docsSidebar.doc.Get a team's full V2 profile": {
+    "message": "Get a team's full V2 profile",
+    "description": "The label for the doc item 'Get a team's full V2 profile' in sidebar 'docsSidebar', linking to the doc api/reference/get-a-teams-full-v-2-profile"
+  },
+  "sidebar.docsSidebar.doc.Search teams by name (V2 full profile)": {
+    "message": "Search teams by name (V2 full profile)",
+    "description": "The label for the doc item 'Search teams by name (V2 full profile)' in sidebar 'docsSidebar', linking to the doc api/reference/search-teams-by-name-v-2-full-profile"
+  },
+  "sidebar.docsSidebar.doc.Get a team's match history (V2)": {
+    "message": "Get a team's match history (V2)",
+    "description": "The label for the doc item 'Get a team's match history (V2)' in sidebar 'docsSidebar', linking to the doc api/reference/get-a-teams-match-history-v-2"
+  },
+  "sidebar.docsSidebar.doc.Get a team's match history (V2, resolved by name)": {
+    "message": "Get a team's match history (V2, resolved by name)",
+    "description": "The label for the doc item 'Get a team's match history (V2, resolved by name)' in sidebar 'docsSidebar', linking to the doc api/reference/get-a-teams-match-history-v-2-resolved-by-name"
+  },
+  "sidebar.docsSidebar.doc.Get a team's map stats (V2)": {
+    "message": "Get a team's map stats (V2)",
+    "description": "The label for the doc item 'Get a team's map stats (V2)' in sidebar 'docsSidebar', linking to the doc api/reference/get-a-teams-map-stats-v-2"
+  },
+  "sidebar.docsSidebar.doc.Get a team's map stats (V2, resolved by name)": {
+    "message": "Get a team's map stats (V2, resolved by name)",
+    "description": "The label for the doc item 'Get a team's map stats (V2, resolved by name)' in sidebar 'docsSidebar', linking to the doc api/reference/get-a-teams-map-stats-v-2-resolved-by-name"
+  },
+  "sidebar.docsSidebar.doc.List teams": {
+    "message": "List teams",
+    "description": "The label for the doc item 'List teams' in sidebar 'docsSidebar', linking to the doc api/reference/list-teams"
+  },
+  "sidebar.docsSidebar.doc.Get a player's full V2 profile": {
+    "message": "Get a player's full V2 profile",
+    "description": "The label for the doc item 'Get a player's full V2 profile' in sidebar 'docsSidebar', linking to the doc api/reference/get-a-players-full-v-2-profile"
+  },
+  "sidebar.docsSidebar.doc.Search players by handle (V2 full profile)": {
+    "message": "Search players by handle (V2 full profile)",
+    "description": "The label for the doc item 'Search players by handle (V2 full profile)' in sidebar 'docsSidebar', linking to the doc api/reference/search-players-by-handle-v-2-full-profile"
+  },
+  "sidebar.docsSidebar.doc.Get a player's match history (V2)": {
+    "message": "Get a player's match history (V2)",
+    "description": "The label for the doc item 'Get a player's match history (V2)' in sidebar 'docsSidebar', linking to the doc api/reference/get-a-players-match-history-v-2"
+  },
+  "sidebar.docsSidebar.doc.Get a player's match history (V2, resolved by name)": {
+    "message": "Get a player's match history (V2, resolved by name)",
+    "description": "The label for the doc item 'Get a player's match history (V2, resolved by name)' in sidebar 'docsSidebar', linking to the doc api/reference/get-a-players-match-history-v-2-resolved-by-name"
+  },
+  "sidebar.docsSidebar.doc.Get a player's average stats (V2)": {
+    "message": "Get a player's average stats (V2)",
+    "description": "The label for the doc item 'Get a player's average stats (V2)' in sidebar 'docsSidebar', linking to the doc api/reference/get-a-players-average-stats-v-2"
+  },
+  "sidebar.docsSidebar.doc.Get a player's average stats (V2, resolved by name)": {
+    "message": "Get a player's average stats (V2, resolved by name)",
+    "description": "The label for the doc item 'Get a player's average stats (V2, resolved by name)' in sidebar 'docsSidebar', linking to the doc api/reference/get-a-players-average-stats-v-2-resolved-by-name"
+  },
+  "sidebar.docsSidebar.doc.List players": {
+    "message": "List players",
+    "description": "The label for the doc item 'List players' in sidebar 'docsSidebar', linking to the doc api/reference/list-players"
+  },
+  "sidebar.docsSidebar.doc.Get a tournament's full V2 profile": {
+    "message": "Get a tournament's full V2 profile",
+    "description": "The label for the doc item 'Get a tournament's full V2 profile' in sidebar 'docsSidebar', linking to the doc api/reference/get-a-tournaments-full-v-2-profile"
+  },
+  "sidebar.docsSidebar.doc.Search tournaments by name (V2 full profile)": {
+    "message": "Search tournaments by name (V2 full profile)",
+    "description": "The label for the doc item 'Search tournaments by name (V2 full profile)' in sidebar 'docsSidebar', linking to the doc api/reference/search-tournaments-by-name-v-2-full-profile"
+  },
+  "sidebar.docsSidebar.doc.Get a tournament's match history": {
+    "message": "Get a tournament's match history",
+    "description": "The label for the doc item 'Get a tournament's match history' in sidebar 'docsSidebar', linking to the doc api/reference/get-a-tournaments-match-history"
+  },
+  "sidebar.docsSidebar.doc.Get a tournament's match history (resolved by name)": {
+    "message": "Get a tournament's match history (resolved by name)",
+    "description": "The label for the doc item 'Get a tournament's match history (resolved by name)' in sidebar 'docsSidebar', linking to the doc api/reference/get-a-tournaments-match-history-resolved-by-name"
+  },
+  "sidebar.docsSidebar.doc.Get a tournament's map pool stats": {
+    "message": "Get a tournament's map pool stats",
+    "description": "The label for the doc item 'Get a tournament's map pool stats' in sidebar 'docsSidebar', linking to the doc api/reference/get-a-tournaments-map-pool-stats"
+  },
+  "sidebar.docsSidebar.doc.Get a tournament's map pool stats (resolved by name)": {
+    "message": "Get a tournament's map pool stats (resolved by name)",
+    "description": "The label for the doc item 'Get a tournament's map pool stats (resolved by name)' in sidebar 'docsSidebar', linking to the doc api/reference/get-a-tournaments-map-pool-stats-resolved-by-name"
+  },
+  "sidebar.docsSidebar.doc.Get a tournament's per player stats": {
+    "message": "Get a tournament's per player stats",
+    "description": "The label for the doc item 'Get a tournament's per player stats' in sidebar 'docsSidebar', linking to the doc api/reference/get-a-tournaments-per-player-stats"
+  },
+  "sidebar.docsSidebar.doc.Get a tournament's per player stats (resolved by name)": {
+    "message": "Get a tournament's per player stats (resolved by name)",
+    "description": "The label for the doc item 'Get a tournament's per player stats (resolved by name)' in sidebar 'docsSidebar', linking to the doc api/reference/get-a-tournaments-per-player-stats-resolved-by-name"
+  },
+  "sidebar.docsSidebar.doc.List tournaments": {
+    "message": "List tournaments",
+    "description": "The label for the doc item 'List tournaments' in sidebar 'docsSidebar', linking to the doc api/reference/list-tournaments"
+  },
+  "sidebar.docsSidebar.doc.Get an organization's full V2 profile": {
+    "message": "Get an organization's full V2 profile",
+    "description": "The label for the doc item 'Get an organization's full V2 profile' in sidebar 'docsSidebar', linking to the doc api/reference/get-an-organizations-full-v-2-profile"
+  },
+  "sidebar.docsSidebar.doc.Search organizations by name (V2 full profile)": {
+    "message": "Search organizations by name (V2 full profile)",
+    "description": "The label for the doc item 'Search organizations by name (V2 full profile)' in sidebar 'docsSidebar', linking to the doc api/reference/search-organizations-by-name-v-2-full-profile"
+  },
+  "sidebar.docsSidebar.doc.List VODs": {
+    "message": "List VODs",
+    "description": "The label for the doc item 'List VODs' in sidebar 'docsSidebar', linking to the doc api/reference/list-vo-ds"
+  },
+  "sidebar.docsSidebar.doc.List published news articles": {
+    "message": "List published news articles",
+    "description": "The label for the doc item 'List published news articles' in sidebar 'docsSidebar', linking to the doc api/reference/list-published-news-articles"
+  },
+  "sidebar.docsSidebar.doc.List matches": {
+    "message": "List matches",
+    "description": "The label for the doc item 'List matches' in sidebar 'docsSidebar', linking to the doc api/reference/list-matches"
+  },
+  "sidebar.docsSidebar.doc.Search teams, players, tournaments and organizations": {
+    "message": "Search teams, players, tournaments and organizations",
+    "description": "The label for the doc item 'Search teams, players, tournaments and organizations' in sidebar 'docsSidebar', linking to the doc api/reference/search-teams-players-tournaments-and-organizations"
+  }
+}

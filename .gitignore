@@ -1,0 +1,9 @@
+node_modules/
+build/
+.docusaurus/
+.env
+.DS_Store
+docs/api/reference/
+
+.idea
+.vscode
