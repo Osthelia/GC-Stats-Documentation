@@ -1888,6 +1888,13 @@
                   "$ref": "#/components/schemas/Player"
                 }
               },
+              "last_tournaments": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/TournamentEntry"
+                },
+                "description": "Last 10 tournaments the team registered for, most recent first. W/L counts decided matches only."
+              },
               "press": {
                 "type": "array",
                 "items": {
@@ -1900,6 +1907,7 @@
               "achievements",
               "last_matches",
               "current_roster",
+              "last_tournaments",
               "press"
             ]
           }
@@ -1970,6 +1978,73 @@
           "placement",
           "placement_label",
           "end_date"
+        ]
+      },
+      "TournamentEntry": {
+        "type": "object",
+        "properties": {
+          "tournament": {
+            "$ref": "#/components/schemas/TournamentV2"
+          },
+          "logos": {
+            "$ref": "#/components/schemas/ThemedLogoUrls"
+          },
+          "team": {
+            "$ref": "#/components/schemas/Team"
+          },
+          "entrant_name": {
+            "type": "string"
+          },
+          "placement": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "description": "Final placement, null when none is recorded."
+          },
+          "placement_label": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "wins": {
+            "type": "integer"
+          },
+          "losses": {
+            "type": "integer"
+          }
+        },
+        "required": [
+          "tournament",
+          "logos",
+          "team",
+          "entrant_name",
+          "placement",
+          "placement_label",
+          "wins",
+          "losses"
+        ]
+      },
+      "TournamentV2": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Tournament"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "liquipedia_link": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              }
+            },
+            "required": [
+              "liquipedia_link"
+            ]
+          }
         ]
       },
       "PressEntry": {
@@ -2043,7 +2118,19 @@
               "current_teams": {
                 "type": "array",
                 "items": {
-                  "$ref": "#/components/schemas/PlayerTeamHistoryEntry"
+                  "$ref": "#/components/schemas/PlayerTeamHistoryEntryV2"
+                }
+              },
+              "past_teams": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/PlayerTeamHistoryEntryV2"
+                }
+              },
+              "last_tournaments": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/TournamentEntry"
                 }
               },
               "press": {
@@ -2058,7 +2145,43 @@
               "achievements",
               "last_matches",
               "current_teams",
+              "past_teams",
+              "last_tournaments",
               "press"
+            ]
+          }
+        ]
+      },
+      "PlayerTeamHistoryEntryV2": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/PlayerTeamHistoryEntry"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "team_name": {
+                "type": "string",
+                "description": "Team name at the time: as of the last day of the stint for past teams, current name otherwise."
+              },
+              "current_name": {
+                "type": "string",
+                "description": "The team's current name."
+              },
+              "logos": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/ThemedLogoUrls"
+                  },
+                  {
+                    "description": "Team logos at the time (last day of the stint for past teams), current logos otherwise."
+                  }
+                ]
+              }
+            },
+            "required": [
+              "current_name",
+              "logos"
             ]
           }
         ]
@@ -2076,10 +2199,67 @@
                   "string",
                   "null"
                 ]
+              },
+              "is_claimed": {
+                "type": "boolean",
+                "description": "True when the profile is linked to a GC-Stats account (the account itself is never exposed)."
               }
             },
             "required": [
-              "liquipedia_link"
+              "liquipedia_link",
+              "is_claimed"
+            ]
+          }
+        ]
+      },
+      "PaginatedStaffTournaments": {
+        "type": "object",
+        "properties": {
+          "page": {
+            "type": "integer"
+          },
+          "per_page": {
+            "type": "integer"
+          },
+          "total": {
+            "type": "integer"
+          },
+          "total_pages": {
+            "type": "integer"
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/StaffTournamentEntry"
+            }
+          }
+        },
+        "required": [
+          "page",
+          "per_page",
+          "total",
+          "total_pages",
+          "data"
+        ]
+      },
+      "StaffTournamentEntry": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TournamentEntry"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "roles": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "description": "Staff roles the person held on the team during the tournament."
+              }
+            },
+            "required": [
+              "roles"
             ]
           }
         ]
@@ -2197,27 +2377,6 @@
         "required": [
           "person_id",
           "handle"
-        ]
-      },
-      "TournamentV2": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/Tournament"
-          },
-          {
-            "type": "object",
-            "properties": {
-              "liquipedia_link": {
-                "type": [
-                  "string",
-                  "null"
-                ]
-              }
-            },
-            "required": [
-              "liquipedia_link"
-            ]
-          }
         ]
       },
       "TournamentMapEntry": {
@@ -3018,7 +3177,7 @@
           "player": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/SearchResultItem"
+              "$ref": "#/components/schemas/PlayerSearchResultItem"
             }
           },
           "tournament": {
@@ -3111,6 +3270,24 @@
           "path",
           "score",
           "popularity"
+        ]
+      },
+      "PlayerSearchResultItem": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/SearchResultItem"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "is_claimed": {
+                "type": "boolean"
+              }
+            },
+            "required": [
+              "is_claimed"
+            ]
+          }
         ]
       }
     },
@@ -5367,7 +5544,7 @@
         ],
         "responses": {
           "200": {
-            "description": "The team plus its Liquipedia link, themed logos, achievements, last 20 matches, current roster and last 10 press articles.",
+            "description": "The team plus its Liquipedia link, themed logos, achievements, last 20 matches, current roster, last 10 tournaments (placement, W/L) and last 10 press articles.",
             "content": {
               "application/json": {
                 "schema": {
@@ -6159,7 +6336,7 @@
         ],
         "responses": {
           "200": {
-            "description": "The player plus their Liquipedia link, themed photo, achievements, last 20 matches, current teams and last 10 press articles.",
+            "description": "The player plus their Liquipedia link, claimed flag, themed photo, achievements, last 20 matches, current and past teams (name and logos at the time, plus current name), last 10 tournaments (placement, W/L) and last 10 press articles.",
             "content": {
               "application/json": {
                 "schema": {
@@ -6601,6 +6778,211 @@
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/PaginatedTeamMatches"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "A path or query parameter failed validation.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Missing or invalid x-api-key header.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "No resource matches the given id.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "429": {
+            "description": "Rate limit exceeded for this API key.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v2/players/{id}/staff-tournaments": {
+      "get": {
+        "summary": "Get the tournaments a player followed as team staff (V2)",
+        "tags": [
+          "Players"
+        ],
+        "security": [
+          {
+            "ApiKeyAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "schema": {
+              "type": "string",
+              "pattern": "^\\d+$",
+              "example": "123",
+              "description": "Positive integer id, passed as a URL path segment (e.g. \"/teams/123\")."
+            },
+            "required": true,
+            "description": "Positive integer id, passed as a URL path segment (e.g. \"/teams/123\").",
+            "name": "id",
+            "in": "path"
+          },
+          {
+            "schema": {
+              "type": "string",
+              "pattern": "^\\d+$",
+              "example": "1",
+              "description": "1 indexed, defaults to 1."
+            },
+            "required": false,
+            "description": "1 indexed, defaults to 1.",
+            "name": "page",
+            "in": "query"
+          },
+          {
+            "schema": {
+              "type": "string",
+              "pattern": "^\\d+$",
+              "example": "20",
+              "description": "Defaults to 20, capped at 50."
+            },
+            "required": false,
+            "description": "Defaults to 20, capped at 50.",
+            "name": "per_page",
+            "in": "query"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Tournaments played by a team while this person held a staff role on it (coach, analyst, manager, etc.), most recent first. W/L is the team's, on decided matches.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PaginatedStaffTournaments"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "A path or query parameter failed validation.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Missing or invalid x-api-key header.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "No resource matches the given id.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "429": {
+            "description": "Rate limit exceeded for this API key.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v2/players/by-name/{name}/staff-tournaments": {
+      "get": {
+        "summary": "Get the tournaments a player followed as team staff, resolved by name (V2)",
+        "tags": [
+          "Players"
+        ],
+        "security": [
+          {
+            "ApiKeyAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "schema": {
+              "type": "string",
+              "example": "sentinels",
+              "description": "Case insensitive prefix match."
+            },
+            "required": true,
+            "description": "Case insensitive prefix match.",
+            "name": "name",
+            "in": "path"
+          },
+          {
+            "schema": {
+              "type": "string",
+              "pattern": "^\\d+$",
+              "example": "1",
+              "description": "1 indexed, defaults to 1."
+            },
+            "required": false,
+            "description": "1 indexed, defaults to 1.",
+            "name": "page",
+            "in": "query"
+          },
+          {
+            "schema": {
+              "type": "string",
+              "pattern": "^\\d+$",
+              "example": "20",
+              "description": "Defaults to 20, capped at 50."
+            },
+            "required": false,
+            "description": "Defaults to 20, capped at 50.",
+            "name": "per_page",
+            "in": "query"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Same as /v2/players/{id}/staff-tournaments, for the first player whose handle starts with the given string.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PaginatedStaffTournaments"
                 }
               }
             }
