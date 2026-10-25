@@ -70,11 +70,30 @@ jobs:
         with:
           images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
           tags: |
-            type=raw,value=latest
-            type=sha,format=long
+            type=sha,format=long,prefix=
 
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v3
+
+      - name: Build image for scan
+        uses: docker/build-push-action@v6
+        with:
+          context: .
+          load: true
+          tags: local/gc-stats-documentation:scan
+          build-args: |
+            OPENAPI_SPEC_URL=${{ env.OPENAPI_SPEC_URL }}
+            CACHEBUST=${{ github.run_id }}
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
+
+      - name: Scan image
+        uses: aquasecurity/trivy-action@ed142fd0673e97e23eac54620cfb913e5ce36c25 # v0.36.0
+        with:
+          image-ref: local/gc-stats-documentation:scan
+          severity: CRITICAL,HIGH
+          ignore-unfixed: true
+          exit-code: "1"
 
       - name: Build and push image
         uses: docker/build-push-action@v6
@@ -87,4 +106,14 @@ jobs:
             OPENAPI_SPEC_URL=${{ env.OPENAPI_SPEC_URL }}
             CACHEBUST=${{ github.run_id }}
           cache-from: type=gha
-          cache-to: type=gha,mode=max
+
+  gitops:
+    name: Bump gc-stats-documentation
+    needs: docker
+    uses: Osthelia/GitOps/.github/workflows/bump-image.yml@main
+    with:
+      image: gc-stats-documentation
+      tag: ${{ github.sha }}
+      overlay: production # pas de staging pour la doc : push sur main = déploiement en production
+    secrets:
+      GITOPS_DEPLOY_KEY: ${{ secrets.GITOPS_DEPLOY_KEY }}
