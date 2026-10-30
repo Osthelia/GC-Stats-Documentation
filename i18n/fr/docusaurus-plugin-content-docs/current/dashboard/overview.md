@@ -7,7 +7,7 @@ title: Prise en main
 
 Le Dashboard est l'endroit où l'équipe de production de votre organisation — casters, journalistes, graphistes, managers, et toute personne travaillant sur votre contenu — gère tout ce que GC Stats sait de vous : votre profil public, vos membres, qui peut se connecter et avec quel rôle, vos articles d'actualité, les crédits de production, ainsi que les chaînes de stream et les VODs.
 
-Les clés API sont également gérées depuis le Dashboard, mais elles sont documentées avec le reste de l'API — voir [Clés API](/api/api-keys) — car une clé est rattachée à un utilisateur ou à une organisation plutôt qu'à une section particulière du Dashboard.
+Les clés API et les webhooks sont également gérés depuis le Dashboard, mais ils sont documentés avec le reste de l'API — voir [Clés API](/api/api-keys) et [Webhooks](/api/webhooks) — car une clé est rattachée à un utilisateur ou à une organisation plutôt qu'à une section particulière du Dashboard.
 
 :::info
 Le Dashboard est différent de l'administration interne du site GC Stats, qui est réservée à l'équipe GC Stats et n'est pas couverte ici.
@@ -42,7 +42,7 @@ La barre latérale n'affiche que les sections que vous avez réellement la permi
 | Organisation | [Profil](/dashboard/profile), [Membres](/dashboard/members), [Accès](/dashboard/access), [Rôles et permissions](/dashboard/roles-permissions) *(owners uniquement)* |
 | Contenu | [Actualités](/dashboard/news), [Crédits de production](/dashboard/credits) |
 | Diffusion | [Chaînes de stream et VODs](/dashboard/streams-and-vods) |
-| Développeur | [Clés API](/api/api-keys) |
+| Développeur | [Clés API](/api/api-keys), [Webhooks](/api/webhooks) |
 
 ## La page d'aperçu de l'organisation
 

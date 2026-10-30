@@ -29,6 +29,8 @@ const sidebars: SidebarsConfig = {
         'api/overview',
         'api/authentication',
         'api/api-keys',
+        'api/public-keys',
+        'api/webhooks',
         'api/errors',
         {
           type: 'category',

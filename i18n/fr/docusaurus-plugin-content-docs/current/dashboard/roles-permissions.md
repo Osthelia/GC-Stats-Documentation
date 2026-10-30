@@ -49,7 +49,7 @@ Le panneau « Liaisons titre-rôle » relie optionnellement un titre de [membre]
 | Supprimer les actualités | Archiver, désarchiver, ou supprimer définitivement des articles |
 | Voir / modifier / supprimer / lier les streams | Voir, modifier, supprimer ou lier des [chaînes de stream](/dashboard/streams-and-vods) |
 | Lier les VODs | Ajouter, modifier ou supprimer des [VODs](/dashboard/streams-and-vods) |
-| Gérer les clés API | Voir les [clés API](/api/api-keys) et leurs statistiques d'utilisation |
+| Gérer les clés API | Voir les [clés API](/api/api-keys) et leurs statistiques d'utilisation, et gérer leurs [webhooks](/api/webhooks) |
 
 ## La permission auteur
 

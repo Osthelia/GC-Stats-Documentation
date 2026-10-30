@@ -49,7 +49,7 @@ The "Member-role links" panel optionally connects a [member](/dashboard/members)
 | Delete news | Archive, unarchive, or permanently delete articles |
 | View / edit / delete / link streams | View, edit, delete, or link [stream channels](/dashboard/streams-and-vods) |
 | Link VODs | Add, edit, or remove [VODs](/dashboard/streams-and-vods) |
-| Manage API keys | View [API keys](/api/api-keys) and their usage stats |
+| Manage API keys | View [API keys](/api/api-keys) and their usage stats, and manage their [webhooks](/api/webhooks) |
 
 ## The author permission
 

@@ -7,7 +7,7 @@ title: Getting started
 
 The Dashboard is where your organization's production team — casters, journalists, graphic designers, managers, and everyone else who works on your content — manages everything GC Stats knows about you: your public profile, your members, who can log in and with what role, your news articles, production credits, and stream channels and VODs.
 
-API keys are also managed from the Dashboard, but they're documented alongside the rest of the API — see [API keys](/api/api-keys) — since a key is scoped to a user or an organization rather than to any one Dashboard section.
+API keys and webhooks are also managed from the Dashboard, but they're documented alongside the rest of the API — see [API keys](/api/api-keys) and [Webhooks](/api/webhooks) — since a key is scoped to a user or an organization rather than to any one Dashboard section.
 
 :::info
 The Dashboard is different from GC Stats' internal site administration, which is reserved for the GC Stats team and isn't covered here.
@@ -42,7 +42,7 @@ The sidebar only shows sections you actually have permission to use on the curre
 | Organization | [Profile](/dashboard/profile), [Members](/dashboard/members), [Access](/dashboard/access), [Roles & permissions](/dashboard/roles-permissions) *(owners only)* |
 | Content | [News](/dashboard/news), [Production credits](/dashboard/credits) |
 | Broadcast | [Stream channels & VODs](/dashboard/streams-and-vods) |
-| Developer | [API keys](/api/api-keys) |
+| Developer | [API keys](/api/api-keys), [Webhooks](/api/webhooks) |
 
 ## The organization overview page
 

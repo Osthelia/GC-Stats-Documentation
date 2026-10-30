@@ -11,7 +11,7 @@ Welcome! This site explains how to use GC Stats, whether you manage an organizat
 ## Who this is for
 
 - **Organization staff** — use the [Dashboard](/dashboard/overview) to manage your organization's profile, members, dashboard access, news, production credits, stream channels, and VODs.
-- **Developers** — use the [API](/api/overview) to pull player and team data into your own tools.
+- **Developers** — use the [API](/api/overview) to pull player and team data into your own tools, and [webhooks](/api/webhooks) to be notified when it changes.
 
 ## Where to start
 
